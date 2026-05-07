@@ -1,16 +1,14 @@
 
-local ProtectedScript = {}
+-- GitHub Script
+local scriptTable = {}
 
-function ProtectedScript:Game(key)
+function scriptTable:Game(key)
     if key == "12345" then
-        print("Access Granted! Loading Main Script...")
-        
-        
-        print("Hello, World! Ang script na ito ay protektado.")
-        
+        print("Success! Tama ang secret key.")
+        -- Dito mo ilagay ang main code mo
     else
-        warn("Invalid Secret Key! Hindi gagana ang script.")
+        print("Maling key!")
     end
 end
 
-return ProtectedScript
+return scriptTable -- MAHALAGA ITO: Kung wala ito, mag-eerror ang loader
