@@ -1,0 +1,16 @@
+
+local ProtectedScript = {}
+
+function ProtectedScript:Game(key)
+    if key == "12345" then
+        print("Access Granted! Loading Main Script...")
+        
+        
+        print("Hello, World! Ang script na ito ay protektado.")
+        
+    else
+        warn("Invalid Secret Key! Hindi gagana ang script.")
+    end
+end
+
+return ProtectedScript
