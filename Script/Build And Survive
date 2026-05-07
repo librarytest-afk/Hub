@@ -1,5 +1,5 @@
 -- I-check lang natin yung variable na pinasa ng loader
-if PasaherongPassword ~= "12345" then 
+if Password ~= "12345" then 
     warn("Unauthorized!") 
     return 
 end
