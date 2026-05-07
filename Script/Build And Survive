@@ -1,14 +1,13 @@
-
--- GitHub Script
-local scriptTable = {}
-
-function scriptTable:Game(key)
-    if key == "12345" then
-        print("Success! Tama ang secret key.")
-        -- Dito mo ilagay ang main code mo
-    else
-        print("Maling key!")
-    end
+-- I-check lang natin yung variable na pinasa ng loader
+if PasaherongPassword ~= "12345" then 
+    warn("Unauthorized!") 
+    return 
 end
 
-return scriptTable -- MAHALAGA ITO: Kung wala ito, mag-eerror ang loader
+-- DIRETSO NA ANG SCRIPT MO DITO (HINDI NA NAKALOOB SA FUNCTION)
+print("Ang galing! Gumana ang script nang walang Init function.")
+
+local player = game.Players.LocalPlayer
+print("Hello, " .. player.Name)
+
+-- [ILAGAY DITO ANG BUONG SCRIPT MO]
