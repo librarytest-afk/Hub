@@ -1,0 +1,17 @@
+local function LoadGame(password, rawUrl, targetId, isEnabled)  
+    if not isEnabled or game.PlaceId ~= targetId then return end
+    local success, content = pcall(function()
+        return game:HttpGet(rawUrl)
+    end)
+    if success then
+        local run = loadstring(content)
+        if run then
+            local env = getfenv(run)
+            env.PasaherongPassword = password
+            run()
+        end
+    end
+end
+
+
+LoadGame("12345", "https://raw.githubusercontent.com/Kairo-afk-bit/Hub/refs/heads/main/Script/Build%20And%20Survive", 4104106043, true)
